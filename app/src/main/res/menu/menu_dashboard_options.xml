@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tm_dashboard_options_meni_unit_view"
+        android:title="View Units"
+        android:icon="@drawable/ic_group"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/tm_dashboard_options_meni_notes_list"
+        android:title="View Notes" />
+
+    <item
+        android:id="@+id/tm_dashboard_options_meni_new_goal"
+        android:title="Add Goal"
+        android:icon="@drawable/ic_add"
+        app:showAsAction="ifRoom"
+        />
+
+
+    <item
+        android:id="@+id/tm_dashboard_options_meni_log_out"
+        android:title="Log Out"
+        app:showAsAction="never"
+        />
+
+</menu>

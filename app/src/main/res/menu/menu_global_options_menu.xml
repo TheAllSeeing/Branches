@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/global_menu_sc">
+        <item android:id="@+id/menu_sc_stats" android:title="Launch Stats" />
+        <item android:id="@+id/menu_sc_launch_tm" android:title="Launch Task Management" />
+    </group>
+    <group android:id="@+id/global_menu_tm">
+
+    </group>
+</menu>

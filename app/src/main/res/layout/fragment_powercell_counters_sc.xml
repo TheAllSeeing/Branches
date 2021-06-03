@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- BOTTOM COUNTERS-->
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_bot_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bot."
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_bot_hit_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Hit"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_bot_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_bot_label"
+        app:layout_constraintEnd_toStartOf="@id/sc_text_form_counters_bot_miss_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_bot_hit_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_bot_hit_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_bot_hit_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_bot_hit_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_bot_miss_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Miss"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_bot_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_bot_label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_bot_miss_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_bot_miss_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_bot_miss_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_bot_miss_value" />
+
+    <!-- OUTER COUNTERS -->
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_out_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Out."
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_bot_label" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_out_hit_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Hit"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_out_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_out_label"
+        app:layout_constraintEnd_toStartOf="@id/sc_text_form_counters_out_miss_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_out_hit_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_out_hit_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_out_hit_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_out_hit_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_out_miss_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Miss"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_out_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_out_label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_out_miss_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_out_miss_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_out_miss_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_out_miss_value" />
+
+    <!-- INNER COUNTERS -->
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_in_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In."
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_out_label" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_in_hit_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Hit"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_in_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_in_label"
+        app:layout_constraintEnd_toStartOf="@id/sc_text_form_counters_in_miss_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_in_hit_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_in_hit_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_in_hit_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_in_hit_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_in_miss_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Miss"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_in_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_in_label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_in_miss_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_in_miss_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_in_miss_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_in_miss_value" />
+
+    <!-- LOADING BAY COUNTERS -->
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_load_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load."
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_in_label" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_load_hit_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Hit"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_load_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_load_label"
+        app:layout_constraintEnd_toStartOf="@id/sc_text_form_counters_load_miss_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_load_hit_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_load_hit_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_load_hit_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_load_hit_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_load_miss_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Miss"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_load_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_load_label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_load_miss_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_load_miss_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_load_miss_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_load_miss_value" />
+
+    <!-- COLLECTED COUNTERS -->
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_coll_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coll."
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_load_label" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_coll_hit_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Hit"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_coll_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_coll_label"
+        app:layout_constraintEnd_toStartOf="@id/sc_text_form_counters_coll_miss_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_coll_hit_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_coll_hit_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_coll_hit_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_coll_hit_value" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_coll_miss_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Miss"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintTop_toTopOf="@id/sc_text_form_counters_coll_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_text_form_counters_coll_label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_text_form_counters_coll_miss_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_text_form_counters_coll_miss_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_text_form_counters_coll_miss_value"
+        app:layout_constraintStart_toStartOf="@id/sc_text_form_counters_coll_miss_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

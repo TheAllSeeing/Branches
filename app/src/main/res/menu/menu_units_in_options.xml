@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tm_unit_in_options_meni_add_subunit"
+        android:icon="@drawable/ic_add_sub"
+        android:title="@string/tm_unit_assigner_options_meni_add_unit_title"
+        app:showAsAction="ifRoom"/>
+</menu>

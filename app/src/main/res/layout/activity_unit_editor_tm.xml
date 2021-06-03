@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.units.TM_UnitPickerActivity">
+
+    <LinearLayout
+        android:id="@+id/tm_unit_editor_constr_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/tm_unit_editor_edit_title"
+            android:layout_width="355dp"
+            android:layout_height="77dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/tm_unit_editor_edit_description"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textMultiLine" />
+
+
+    </LinearLayout>
+
+    <!-- Progress bar overlay; shown while login is in progress -->
+    <include layout="@layout/loading_overlay" />
+
+</FrameLayout>

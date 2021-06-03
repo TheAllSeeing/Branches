@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.TM_DashboardActivity">
+
+    <LinearLayout
+        android:id="@+id/dashboard_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--Margin start is 8 plus 8 that are built in each row (see lisrow_recycler_goal_dashboard_list)
+        To a total of 16 which is the builtin in TaskGridRecycler. So it's on the same line.
+        -->
+        <com.evergreen.treetop.ui.views.recycler.GoalBoardListRecycler
+            android:id="@+id/tm_dashboard_recycler_goal_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/tm_dashboard_button_filter_units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Units"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskGridRecycler"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                />
+
+            <Button
+                android:id="@+id/tm_dashboard_button_filter_assigned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Assigned"
+                app:layout_constraintStart_toEndOf="@+id/tm_dashboard_button_filter_units"
+                app:layout_constraintTop_toTopOf="@+id/tm_dashboard_button_filter_units"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                />
+
+            <Button
+                android:id="@+id/tm_dashboard_button_filter_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Complete"
+                app:layout_constraintStart_toEndOf="@+id/tm_dashboard_button_filter_assigned"
+                app:layout_constraintTop_toTopOf="@+id/tm_dashboard_button_filter_assigned"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                />
+        </LinearLayout>
+
+        <com.evergreen.treetop.ui.views.recycler.TaskGridRecycler
+            android:id="@+id/tm_dashboard_recycler_task_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <include layout="@layout/loading_overlay" />
+
+</FrameLayout>

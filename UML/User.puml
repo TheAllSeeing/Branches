@@ -1,0 +1,79 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+        class Goal {
+            {static} + COMPLETE_ICON : String
+            {static} + INCOMPLETE_ICON : String
+            - m_completed : boolean
+            - m_description : String
+            - m_id : String
+            - m_priority : int
+            - m_subtaskIds : Set<String>
+            - m_title : String
+            - m_unitId : String
+            + Goal(int, String, String, String, String)
+            + addSubtask(AppTask) : void
+            + addSubtaskById(String) : void
+            + equals(Object) : boolean
+            + getCompletedCount() : int
+            + getDescription() : String
+            + getIcon() : String
+            + getId() : String
+            + getPriority() : int
+            + getSubtaskIds() : List<String>
+            + getSubtasks() : List<AppTask>
+            + getTaskCount() : int
+            + getTitle() : String
+            + getUnit() : Unit
+            + getUnitId() : String
+            + isCompleted() : boolean
+            {static} + of(DBGoal) : Goal
+            + priorityChar() : String
+            + removeSubtask(AppTask) : void
+            + setCompleted(boolean) : void
+            + setDescription(String) : void
+            + setPriority(int) : void
+            + setTitle(String) : void
+            + setUnit(Unit) : void
+            + setUnitId(String) : void
+            + toString() : String
+        }
+
+
+        class AppTask {
+            {static} + PRIROITY_COMPARATOR : Comparator<AppTask>
+            - m_assigneesIds : Set<String>
+            - m_assignerId : String
+            - m_endDeadline : LocalDate
+            - m_goalId : String
+            - m_parentId : String
+            - m_rootTaskId : String
+            - m_startDeadline : LocalDate
+            + AppTask(int, String, String, String, String, String,
+                LocalDate, LocalDate, String, String, String)
+            + addAssignee(User) : void
+            + addAssigneeById(String) : void
+            + getAssignees() : List<User>
+            + getAssigneesIds() : List<String>
+            + getAssigner() : User
+            + getAssignerId() : String
+            + getEndDeadline() : LocalDate
+            + getGoal() : Goal
+            + getGoalId() : String
+            + getParent() : AppTask
+            + getParentId() : String
+            + getRootTask() : AppTask
+            + getRootTaskId() : String
+            + getStartDeadline() : LocalDate
+            + isRootTask() : boolean
+            {static} + of(DBTask) : AppTask
+            + removeAssignee(User) : void
+            + removeAssigneeById(String) : void
+            + setEndDeadline(LocalDate) : void
+            + setStartDeadline(LocalDate) : void
+            + toString() : String
+        }
+
+        AppTask -right-|> Goal
+
+@enduml

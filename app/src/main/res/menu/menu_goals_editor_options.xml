@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tm_goal_options_meni_submit"
+        android:icon="@drawable/ic_confirm"
+        android:title="@string/tm_options_meni_submit_title"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tm_goal_options_meni_view"
+        android:icon="@drawable/ic_view"
+        android:title="@string/tm_options_meni_view_mode_title"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

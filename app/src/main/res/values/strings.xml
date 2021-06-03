@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name" translatable="false">Treetop</string>
+
+    <!-- activity_scouting_form_sc -->
+    <string name="sc_scouting_form_auto_tab_text" translatable="false">auto</string>
+    <string name="sc_scouting_form_teleop_tab_text" translatable="false">teleop</string>
+    <string name="sc_scouting_form_end_tab_text" translatable="false">endgame</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="form_submit_button_text">Submit Form</string>
+    <string name="sc_scouting_form_submit_tab_text">Submit</string>
+    <string name="sc_user_text_sign_up_email_prompt">Email</string>
+    <string name="sc_user_text_sign_up_username_prompt">Username</string>
+    <string name="sc_user_text_sign_up_password_prompt">Password</string>
+    <string name="sc_user_text_sign_up_title">SIGN UP</string>
+
+    <string name="tm_options_meni_submit_title">Submit</string>
+    <string name="tm_goal_options_owner_meni_toggle_edit_mode_title">Edit Mode</string>
+    <string name="tm_goal_options_meni_delete_goal_title">Delete Goal</string>
+    <string name="tm_goal_options_meni_add_task_title">Add Task</string>
+    <string name="tm_goal_options_mark_complete_title">Mark Complete</string>
+    <string name="tm_goal_options_meni_task_dashboard_title">Task Dashboard</string>
+    <string name="tm_options_meni_view_mode_title">View Mode</string>
+    <string name="tm_task_options_owner_meni_toggle_edit_mode_title">Edit Mode</string>
+    <string name="tm_task_assigner_options_meni_add_task_title">Add Subtasks</string>
+    <string name="tm_task_options_assigner_meni_delete_goal_title">Delete Task</string>
+    <string name="tm_unit_assigner_options_meni_add_unit_title">Add Subunit</string>
+</resources>

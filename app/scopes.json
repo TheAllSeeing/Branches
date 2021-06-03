@@ -1,0 +1,62 @@
+{
+  "ui": {
+    "our" : [
+      "text",
+      "edit",
+      "spin"
+    ],
+
+    "frags" : [
+      "form"
+    ],
+
+    "tabs" : [
+      "form"
+    ]
+  },
+
+  "arch" : {
+
+    "tasks" : {
+
+    },
+
+    "scout" : [
+      "data",
+      "form",
+      "hand",
+      "utils"
+    ]
+  },
+
+  "acts" : {
+
+    "task" : {
+
+    },
+
+    "scout" : {
+      "form" : [
+        "c",
+        "i"
+      ]
+
+    }
+  },
+
+  "test" : {},
+
+  "org" : [
+    "ignore",
+    "scopes",
+    "todo"
+  ],
+
+  "build" : {},
+
+  "res" : {
+    "scout" : [
+      "form"
+    ]
+  }
+}  

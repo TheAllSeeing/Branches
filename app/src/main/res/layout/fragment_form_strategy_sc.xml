@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.form.SC_FormStrategyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+
+        <com.evergreen.treetop.ui.views.spinner.OvalSpinner
+            android:id="@+id/sc_form_strategy_spinner_picker"
+            android:layout_width="363dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:prompt="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sc_form_strategy_text_picker_label" />
+
+        <TextView
+            android:id="@+id/sc_form_strategy_text_picker_label"
+            android:layout_width="195dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.evergreen.treetop.ui.views.text.OvalTextView
+            android:id="@+id/sc_form_strategy_text_option_desc"
+            android:layout_width="350dp"
+            android:layout_height="342dp"
+            android:layout_marginTop="40dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sc_form_strategy_spinner_picker" />
+
+        <com.evergreen.treetop.ui.views.text.OvalTextView
+            android:id="@+id/sc_form_strategy_button_submit"
+            android:layout_width="150dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:text="Next >"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sc_form_strategy_text_option_desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

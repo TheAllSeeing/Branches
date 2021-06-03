@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/tm_goal_options_meni_edit_mode"
+        android:icon="@drawable/ic_edit"
+        android:title="@string/tm_goal_options_owner_meni_toggle_edit_mode_title"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tm_goal_options_meni_delete"
+        android:icon="@drawable/ic_trash"
+        android:title="@string/tm_goal_options_meni_delete_goal_title"
+        app:showAsAction="ifRoom"/>
+
+</menu>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.form.SC_FormHeaderFragment">
+
+
+    <!-- MATCH TIMER-->
+
+    <TextView
+        android:id="@+id/sc_form_auto_match_timer"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_rectangle_15"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_auto_team_num"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- MATCH DETAILS -->
+
+    <TextView
+        android:id="@+id/sc_form_auto_team_num"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_rectangle_20"
+        android:gravity="center"
+        android:text="Team #"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_auto_function_label"
+        app:layout_constraintStart_toEndOf="@id/sc_form_auto_match_timer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_form_auto_match_num"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_rectangle_20"
+        android:gravity="center"
+        android:text="Match #"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/sc_form_auto_team_num"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/sc_form_auto_team_num"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_auto_team_num" />
+
+    <!-- FUNCTION SWITCH -->
+
+    <TextView
+        android:id="@+id/sc_form_auto_function_label"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Functions"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sc_form_auto_team_num"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sc_form_auto_function_switch"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toEndOf="@id/sc_form_auto_function_label"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="@id/sc_form_auto_function_label"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_auto_function_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

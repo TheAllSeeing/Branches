@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/tm_goal_options_owner_meni_add_subtask"
+        android:icon="@drawable/ic_add_sub"
+        android:title="@string/tm_goal_options_meni_add_task_title"
+        app:showAsAction="ifRoom"/>
+
+
+    <item
+        android:id="@+id/tm_goal_options_meni_toggle_complete"
+        android:icon="@drawable/ic_complete"
+        android:title="@string/tm_goal_options_mark_complete_title" />
+
+</menu>

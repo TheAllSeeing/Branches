@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotation="-1">
+
+    <TextView
+        android:id="@+id/sc_form_results_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Results"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_form_results_radio_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Match Result:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_results_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_results_title" />
+
+    <RadioGroup
+        android:id="@+id/sc_form_results_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/sc_form_results_radio_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sc_form_results_radio_label"
+        app:layout_constraintTop_toTopOf="@id/sc_form_results_radio_label">
+
+        <RadioButton
+            android:id="@+id/sc_form_results_radio_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Win"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/sc_form_results_radio_draw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Draw"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/sc_form_results_radio_loss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loss"
+            android:textSize="20sp"
+            />
+
+    </RadioGroup>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sc_from_results_switch_energized"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:text="Shield Energized"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/sc_form_results_radio_label"
+        app:layout_constraintTop_toBottomOf="@+id/sc_form_results_radio_label" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sc_form_results_switch_operational"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Shield Operational"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/sc_from_results_switch_energized"
+        app:layout_constraintTop_toBottomOf="@+id/sc_from_results_switch_energized" />
+
+    <TextView
+        android:id="@+id/sc_form_results_text_score_label"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Score"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sc_form_results_switch_operational" />
+
+    <EditText
+        android:id="@+id/sc_form_results_edit_score"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toEndOf="@+id/sc_form_results_text_score_label"
+        app:layout_constraintTop_toTopOf="@+id/sc_form_results_text_score_label" />
+
+    <com.evergreen.treetop.ui.views.text.OvalTextView
+        android:id="@+id/sc_form_results_text_next_button"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:rotation="1"
+        android:text="Next >"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

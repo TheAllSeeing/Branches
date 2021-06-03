@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- TOP BAR -->
+
+
+    <fragment
+        android:id="@+id/sc_form_frag_teleop_header"
+        class="com.evergreen.treetop.ui.fragments.form.SC_FormHeaderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="10dp"
+        tools:layout="@layout/fragment_form_header_sc" />
+
+    <!-- POWERCELL COUNTERS -->
+
+
+    <!-- DEFENCE STOPWATCH -->
+
+    <fragment
+        android:id="@+id/sc_form_frag_teleop_counters"
+        class="com.evergreen.treetop.ui.fragments.form.SC_FormCountersFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sc_form_frag_teleop_header"
+        tools:layout="@layout/fragment_powercell_counters_sc"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/sc_form_teleop_defence_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Def."
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_frag_teleop_counters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_teleop_defence_stopwatch"/>
+
+    <TextView
+        android:id="@+id/sc_form_teleop_defence_stopwatch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="ss.SS"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/double_circle"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintTop_toTopOf="@id/sc_form_teleop_defence_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_form_teleop_defence_label"
+        app:layout_constraintStart_toEndOf="@id/sc_form_teleop_defence_label"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ROTATION CONTROL -->
+
+    <TextView
+        android:id="@+id/sc_form_teleop_rotation_label"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Rotation Control"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginStart="42dp"
+        app:layout_constraintTop_toTopOf="@id/sc_form_teleop_rotation_miss_value"
+        app:layout_constraintBottom_toBottomOf="@id/sc_form_teleop_rotation_miss_decrement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_teleop_rotation_switch"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sc_form_teleop_rotation_switch"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintTop_toTopOf="@id/sc_form_teleop_rotation_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_form_teleop_rotation_label"
+        app:layout_constraintStart_toEndOf="@id/sc_form_teleop_rotation_label"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_teleop_rotation_miss_value"/>
+
+    <TextView
+        android:id="@+id/sc_form_teleop_rotation_miss_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Miss"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="42dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_teleop_defence_label"
+        app:layout_constraintStart_toEndOf="@id/sc_form_teleop_rotation_switch"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_form_teleop_rotation_miss_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_teleop_rotation_miss_value"
+        app:layout_constraintStart_toStartOf="@id/sc_form_teleop_rotation_miss_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_form_teleop_rotation_miss_value" />
+
+    <!-- POSITION CONTROL -->
+
+    <TextView
+        android:id="@+id/sc_form_teleop_position_label"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Position Control"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginStart="42dp"
+        app:layout_constraintTop_toTopOf="@id/sc_form_teleop_position_miss_value"
+        app:layout_constraintBottom_toBottomOf="@id/sc_form_teleop_position_miss_decrement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_teleop_position_switch"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sc_form_teleop_position_switch"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintTop_toTopOf="@id/sc_form_teleop_position_label"
+        app:layout_constraintBottom_toBottomOf="@id/sc_form_teleop_position_label"
+        app:layout_constraintStart_toEndOf="@id/sc_form_teleop_position_label"
+        app:layout_constraintEnd_toStartOf="@id/sc_form_teleop_position_miss_value"/>
+
+    <TextView
+        android:id="@+id/sc_form_teleop_position_miss_value"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="# Miss"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/circle"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="42dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_teleop_rotation_miss_decrement"
+        app:layout_constraintStart_toEndOf="@id/sc_form_teleop_position_switch"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sc_form_teleop_position_miss_decrement"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="-"
+        android:gravity="center"
+        android:background="@drawable/round_rectangle_10"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/sc_form_teleop_position_miss_value"
+        app:layout_constraintStart_toStartOf="@id/sc_form_teleop_position_miss_value"
+        app:layout_constraintEnd_toEndOf="@id/sc_form_teleop_position_miss_value"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        >
+
+        <!-- TOP BAR -->
+
+        <fragment
+            android:id="@+id/sc_form_frag_auto_header"
+            class="com.evergreen.treetop.ui.fragments.form.SC_FormHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/sc_form_auto_loaded_counter_valuebox"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingBottom="10dp"
+            tools:layout="@layout/fragment_form_header_sc" />
+
+        <!-- LINE PASS -->
+
+        <fragment
+            android:id="@+id/sc_form_frag_auto_header2"
+            class="com.evergreen.treetop.ui.fragments.form.SC_FormHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/sc_form_auto_loaded_counter_valuebox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout="@layout/fragment_form_header_sc" />
+
+        <TextView
+            android:id="@+id/sc_form_auto_line_passed_label"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Passed the line"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/sc_form_auto_line_passed_switch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sc_form_auto_loaded_counter_valuebox" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sc_form_auto_line_passed_switch"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_marginEnd="180dp"
+            app:layout_constraintStart_toEndOf="@id/sc_form_auto_line_passed_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sc_form_auto_line_passed_label"
+            app:layout_constraintBottom_toBottomOf="@id/sc_form_auto_line_passed_label" />
+
+        <!-- LOADED POWERCELLS -->
+
+        <TextView
+            android:id="@+id/sc_form_auto_loaded_counter_valuebox"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="116dp"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text="# Loaded"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/sc_form_auto_loaded_counter_decrement"
+            app:layout_constraintHorizontal_bias="0.672"
+            app:layout_constraintStart_toEndOf="@id/sc_form_auto_line_passed_switch"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sc_form_auto_loaded_counter_decrement"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:text="-"
+            android:gravity="center"
+            android:background="@drawable/round_rectangle_10"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toEndOf="@id/sc_form_auto_loaded_counter_valuebox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sc_form_auto_loaded_counter_valuebox"
+            app:layout_constraintBottom_toBottomOf="@id/sc_form_auto_loaded_counter_valuebox" />
+
+        <!-- POWERCELL COUNTERS -->
+
+        <fragment
+            android:id="@+id/sc_form_frag_auto_counters"
+            class="com.evergreen.treetop.ui.fragments.form.SC_FormCountersFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sc_form_auto_line_passed_label"
+            tools:layout="@layout/fragment_powercell_counters_sc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

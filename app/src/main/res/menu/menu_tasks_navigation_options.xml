@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tm_task_options_meni_add_event_start"
+        android:icon="@drawable/ic_calendar"
+        android:title="Add start as event" />
+
+    <item
+        android:id="@+id/tm_task_options_meni_add_event_end"
+        android:icon="@drawable/ic_calendar"
+        android:title="Add end as event" />
+
+    <item
+        android:id="@+id/tm_task_nav_options_meni_parent"
+        android:icon="@drawable/ic_up"
+        android:title="Go to Parent" />
+
+    <item
+        android:id="@+id/tm_task_options_meni_view_goal"
+        android:icon="@drawable/ic_flag"
+        android:title="Goal Page" />
+
+    <item
+        android:id="@+id/tm_task_options_meni_view_root_task"
+        android:icon="@drawable/ic_branch"
+        android:title="Root Task" />
+
+    <item
+        android:id="@+id/tm_task_options_meni_dashboard"
+        android:icon="@drawable/ic_event"
+        android:title="Task Dashboard" />
+
+</menu>
